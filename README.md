@@ -1,20 +1,22 @@
-Project-Algebra
+## Project-Algebra
 
-Primer proyecto-Álgebra Lineal para Computación
+## Primer proyecto-Álgebra Lineal para Computación
 
-Creditos
+## Creditos
 
-Fernández Jiménez Axel Alejandro
-Flores Medina Bryand Josue
-Herrera Alvarez Diego Alfonso
+Fernández Jiménez Axel Alejandro.
 
-Descripción
+Flores Medina Bryand Josue.
+
+Herrera Alvarez Diego Alfonso.
+
+## Descripción
 
 
-Instalación
+## Instalación
 
 TODO
 
-Licencia
+## Licencia
 
 TODO
