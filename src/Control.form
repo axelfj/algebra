@@ -1,54 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Control">
-  <grid id="27dc6" binding="Main" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="1b3df" binding="main" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="61" y="20" width="247" height="184"/>
+      <xy x="20" y="20" width="500" height="400"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <component id="e00a5" class="javax.swing.JButton" binding="gaussJhordanButton" default-binding="true">
+      <component id="4a933" class="javax.swing.JButton" binding="gaussButton" default-binding="true">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Gauss Jhordan"/>
+          <text value="Gauss"/>
         </properties>
-        <clientProperties>
-          <hideActionText class="java.lang.Boolean" value="false"/>
-        </clientProperties>
       </component>
-      <component id="4c8fc" class="javax.swing.JButton" binding="bareissButton" default-binding="true">
+      <component id="ee649" class="javax.swing.JButton" binding="transformaciónLinealButton" default-binding="true">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Transformación Lineal"/>
+        </properties>
+      </component>
+      <component id="5c93" class="javax.swing.JButton" binding="bareissButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Bareiss"/>
         </properties>
       </component>
-      <component id="c4186" class="javax.swing.JButton" binding="linealTransformationButton" default-binding="true">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Lineal Transformation"/>
-        </properties>
-      </component>
-      <component id="e4652" class="javax.swing.JButton" binding="exitButton" default-binding="true">
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Exit"/>
-        </properties>
-      </component>
-      <component id="f2f22" class="javax.swing.JButton" binding="informationButton" default-binding="true">
+      <component id="fbea0" class="javax.swing.JButton" binding="informaciónButton" default-binding="true">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Information"/>
+          <text value="Información"/>
+        </properties>
+      </component>
+      <component id="fdbb5" class="javax.swing.JButton" binding="salirButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Salir"/>
         </properties>
       </component>
     </children>
