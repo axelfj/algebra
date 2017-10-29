@@ -1,2 +1,4 @@
 *.xml
 *.iml
+/Project-Algebra/nbproject/private/
+/Project-Algebra/build/
