@@ -66,6 +66,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtResultado = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -112,6 +113,7 @@
             this.cmbxEcuaciones.Name = "cmbxEcuaciones";
             this.cmbxEcuaciones.Size = new System.Drawing.Size(50, 31);
             this.cmbxEcuaciones.TabIndex = 2;
+            this.cmbxEcuaciones.SelectedIndexChanged += new System.EventHandler(this.cmbxEcuaciones_SelectedIndexChanged);
             // 
             // lblInstrucciones2
             // 
@@ -404,11 +406,23 @@
             this.label3.TabIndex = 37;
             this.label3.Text = "|";
             // 
+            // txtResultado
+            // 
+            this.txtResultado.Location = new System.Drawing.Point(12, 235);
+            this.txtResultado.Multiline = true;
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.ReadOnly = true;
+            this.txtResultado.Size = new System.Drawing.Size(1105, 287);
+            this.txtResultado.TabIndex = 38;
+            this.txtResultado.TabStop = false;
+            this.txtResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1129, 534);
+            this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.txtMatriz56);
             this.Controls.Add(this.txtMatriz55);
             this.Controls.Add(this.txtMatriz54);
@@ -495,6 +509,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtResultado;
     }
 }
 
