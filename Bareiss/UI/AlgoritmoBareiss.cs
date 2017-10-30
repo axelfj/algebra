@@ -16,9 +16,11 @@ namespace UI
 
             int pivoteAnterior = 1;
 
+            int signo = 1;
+
             for (int i = 1; i < n; i++)
             {
-                double[,] matrizGenerada = new double[n,n + 1];
+                double[,] matrizGenerada = new double[n, n + 1];
 
                 double[,] matrizAnterior = nMatrices[i - 1];
 
@@ -33,11 +35,22 @@ namespace UI
 
                 int pivoteActual = (int)matrizGenerada[i - 1, i - 1];
 
+                //Genera la nueva matriz
                 for (int k = i; k < n; k++)
                 {
                     for (int j = i; j < n + 1; j++)
                     {
-                        matrizGenerada[k, j] = ((pivoteActual * matrizAnterior[k, j]) - (matrizAnterior[k, i-1] * matrizAnterior[i-1, j]))/pivoteAnterior;
+                        matrizGenerada[k, j] = ((pivoteActual * matrizAnterior[k, j]) - (matrizAnterior[k, i - 1] * matrizAnterior[i - 1, j])) / pivoteAnterior;
+                    }
+                }
+
+                bool hayCeros = false;
+                for (int k = 0; k < n && !hayCeros; k++)
+                {
+                    if (matrizGenerada[k, k] == 0)
+                    {
+                        signo = -signo;
+                        hayCeros = true;
                     }
                 }
 
@@ -47,7 +60,12 @@ namespace UI
 
             double[,] determinante = new double[1, 1];
 
-            determinante[0, 0] = nMatrices.Last()[n - 1, n - 1];
+            determinante[0, 0] = nMatrices.Last()[n - 1, n - 1] * signo;
+
+            if ((determinante[0, 0] == 0) || (Double.IsNaN(determinante[0, 0])))
+            {
+                throw new System.ArithmeticException("El sistema no tiene solución única");
+            }
 
             nMatrices.Add(determinante);
 
@@ -69,6 +87,11 @@ namespace UI
 
             for (int k = 0; k < n; k++)
             {
+                if (Double.IsNaN(ecuacionesSolucion[0, k]))
+                {
+                    throw new System.ArithmeticException("El sistema no tiene solución única");
+                }
+
                 conjuntoSolucion[0, k] = ecuacionesSolucion[0, k] / determinante[0, 0];
             }
 

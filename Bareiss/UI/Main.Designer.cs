@@ -66,7 +66,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtResultado = new System.Windows.Forms.TextBox();
+            this.lblMatrizA0 = new System.Windows.Forms.Label();
+            this.lblMatrizA1 = new System.Windows.Forms.Label();
+            this.lblMatrizA2 = new System.Windows.Forms.Label();
+            this.lblMatrizA3 = new System.Windows.Forms.Label();
+            this.lblMatrizA4 = new System.Windows.Forms.Label();
+            this.lblBracketAbre = new System.Windows.Forms.Label();
+            this.lblBracketCierra = new System.Windows.Forms.Label();
+            this.lblA0 = new System.Windows.Forms.Label();
+            this.lblA4 = new System.Windows.Forms.Label();
+            this.lblA3 = new System.Windows.Forms.Label();
+            this.lblA2 = new System.Windows.Forms.Label();
+            this.lblA1 = new System.Windows.Forms.Label();
+            this.lblDet = new System.Windows.Forms.Label();
+            this.lblConjuntoSolucion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -406,23 +419,164 @@
             this.label3.TabIndex = 37;
             this.label3.Text = "|";
             // 
-            // txtResultado
+            // lblMatrizA0
             // 
-            this.txtResultado.Location = new System.Drawing.Point(12, 235);
-            this.txtResultado.Multiline = true;
-            this.txtResultado.Name = "txtResultado";
-            this.txtResultado.ReadOnly = true;
-            this.txtResultado.Size = new System.Drawing.Size(1105, 287);
-            this.txtResultado.TabIndex = 38;
-            this.txtResultado.TabStop = false;
-            this.txtResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblMatrizA0.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMatrizA0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMatrizA0.Location = new System.Drawing.Point(157, 258);
+            this.lblMatrizA0.Name = "lblMatrizA0";
+            this.lblMatrizA0.Size = new System.Drawing.Size(134, 102);
+            this.lblMatrizA0.TabIndex = 38;
+            this.lblMatrizA0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMatrizA1
+            // 
+            this.lblMatrizA1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMatrizA1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMatrizA1.Location = new System.Drawing.Point(331, 258);
+            this.lblMatrizA1.Name = "lblMatrizA1";
+            this.lblMatrizA1.Size = new System.Drawing.Size(134, 102);
+            this.lblMatrizA1.TabIndex = 39;
+            this.lblMatrizA1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMatrizA2
+            // 
+            this.lblMatrizA2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMatrizA2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMatrizA2.Location = new System.Drawing.Point(494, 258);
+            this.lblMatrizA2.Name = "lblMatrizA2";
+            this.lblMatrizA2.Size = new System.Drawing.Size(134, 102);
+            this.lblMatrizA2.TabIndex = 40;
+            this.lblMatrizA2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMatrizA3
+            // 
+            this.lblMatrizA3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMatrizA3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMatrizA3.Location = new System.Drawing.Point(674, 258);
+            this.lblMatrizA3.Name = "lblMatrizA3";
+            this.lblMatrizA3.Size = new System.Drawing.Size(134, 102);
+            this.lblMatrizA3.TabIndex = 41;
+            this.lblMatrizA3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMatrizA4
+            // 
+            this.lblMatrizA4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMatrizA4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMatrizA4.Location = new System.Drawing.Point(843, 258);
+            this.lblMatrizA4.Name = "lblMatrizA4";
+            this.lblMatrizA4.Size = new System.Drawing.Size(134, 102);
+            this.lblMatrizA4.TabIndex = 42;
+            this.lblMatrizA4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBracketAbre
+            // 
+            this.lblBracketAbre.AutoSize = true;
+            this.lblBracketAbre.Font = new System.Drawing.Font("Microsoft Sans Serif", 99F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBracketAbre.Location = new System.Drawing.Point(44, 227);
+            this.lblBracketAbre.Name = "lblBracketAbre";
+            this.lblBracketAbre.Size = new System.Drawing.Size(107, 149);
+            this.lblBracketAbre.TabIndex = 43;
+            this.lblBracketAbre.Text = "{";
+            // 
+            // lblBracketCierra
+            // 
+            this.lblBracketCierra.AutoSize = true;
+            this.lblBracketCierra.Font = new System.Drawing.Font("Microsoft Sans Serif", 99F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBracketCierra.Location = new System.Drawing.Point(983, 227);
+            this.lblBracketCierra.Name = "lblBracketCierra";
+            this.lblBracketCierra.Size = new System.Drawing.Size(107, 149);
+            this.lblBracketCierra.TabIndex = 44;
+            this.lblBracketCierra.Text = "}";
+            // 
+            // lblA0
+            // 
+            this.lblA0.AutoSize = true;
+            this.lblA0.Location = new System.Drawing.Point(220, 242);
+            this.lblA0.Name = "lblA0";
+            this.lblA0.Size = new System.Drawing.Size(20, 13);
+            this.lblA0.TabIndex = 45;
+            this.lblA0.Text = "A0";
+            // 
+            // lblA4
+            // 
+            this.lblA4.AutoSize = true;
+            this.lblA4.Location = new System.Drawing.Point(900, 242);
+            this.lblA4.Name = "lblA4";
+            this.lblA4.Size = new System.Drawing.Size(20, 13);
+            this.lblA4.TabIndex = 46;
+            this.lblA4.Text = "A4";
+            // 
+            // lblA3
+            // 
+            this.lblA3.AutoSize = true;
+            this.lblA3.Location = new System.Drawing.Point(734, 245);
+            this.lblA3.Name = "lblA3";
+            this.lblA3.Size = new System.Drawing.Size(20, 13);
+            this.lblA3.TabIndex = 47;
+            this.lblA3.Text = "A3";
+            // 
+            // lblA2
+            // 
+            this.lblA2.AutoSize = true;
+            this.lblA2.Location = new System.Drawing.Point(547, 242);
+            this.lblA2.Name = "lblA2";
+            this.lblA2.Size = new System.Drawing.Size(20, 13);
+            this.lblA2.TabIndex = 48;
+            this.lblA2.Text = "A2";
+            // 
+            // lblA1
+            // 
+            this.lblA1.AutoSize = true;
+            this.lblA1.Location = new System.Drawing.Point(385, 242);
+            this.lblA1.Name = "lblA1";
+            this.lblA1.Size = new System.Drawing.Size(20, 13);
+            this.lblA1.TabIndex = 49;
+            this.lblA1.Text = "A1";
+            // 
+            // lblDet
+            // 
+            this.lblDet.AutoSize = true;
+            this.lblDet.BackColor = System.Drawing.SystemColors.Control;
+            this.lblDet.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDet.Location = new System.Drawing.Point(62, 447);
+            this.lblDet.Name = "lblDet";
+            this.lblDet.Size = new System.Drawing.Size(289, 38);
+            this.lblDet.TabIndex = 52;
+            this.lblDet.Text = "El determinante es: ";
+            this.lblDet.Visible = false;
+            // 
+            // lblConjuntoSolucion
+            // 
+            this.lblConjuntoSolucion.AutoSize = true;
+            this.lblConjuntoSolucion.BackColor = System.Drawing.SystemColors.Control;
+            this.lblConjuntoSolucion.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConjuntoSolucion.Location = new System.Drawing.Point(417, 447);
+            this.lblConjuntoSolucion.Name = "lblConjuntoSolucion";
+            this.lblConjuntoSolucion.Size = new System.Drawing.Size(378, 38);
+            this.lblConjuntoSolucion.TabIndex = 53;
+            this.lblConjuntoSolucion.Text = "El conjunto de solución es: ";
+            this.lblConjuntoSolucion.Visible = false;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1129, 534);
-            this.Controls.Add(this.txtResultado);
+            this.ClientSize = new System.Drawing.Size(1129, 604);
+            this.Controls.Add(this.lblConjuntoSolucion);
+            this.Controls.Add(this.lblDet);
+            this.Controls.Add(this.lblA1);
+            this.Controls.Add(this.lblA2);
+            this.Controls.Add(this.lblA3);
+            this.Controls.Add(this.lblA4);
+            this.Controls.Add(this.lblA0);
+            this.Controls.Add(this.lblBracketAbre);
+            this.Controls.Add(this.lblBracketCierra);
+            this.Controls.Add(this.lblMatrizA4);
+            this.Controls.Add(this.lblMatrizA3);
+            this.Controls.Add(this.lblMatrizA2);
+            this.Controls.Add(this.lblMatrizA1);
+            this.Controls.Add(this.lblMatrizA0);
             this.Controls.Add(this.txtMatriz56);
             this.Controls.Add(this.txtMatriz55);
             this.Controls.Add(this.txtMatriz54);
@@ -510,7 +664,20 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtResultado;
+        private System.Windows.Forms.Label lblMatrizA0;
+        private System.Windows.Forms.Label lblMatrizA1;
+        private System.Windows.Forms.Label lblMatrizA2;
+        private System.Windows.Forms.Label lblMatrizA3;
+        private System.Windows.Forms.Label lblMatrizA4;
+        private System.Windows.Forms.Label lblBracketAbre;
+        private System.Windows.Forms.Label lblBracketCierra;
+        private System.Windows.Forms.Label lblA0;
+        private System.Windows.Forms.Label lblA4;
+        private System.Windows.Forms.Label lblA3;
+        private System.Windows.Forms.Label lblA2;
+        private System.Windows.Forms.Label lblA1;
+        private System.Windows.Forms.Label lblDet;
+        private System.Windows.Forms.Label lblConjuntoSolucion;
     }
 }
 
