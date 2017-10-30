@@ -1,0 +1,10 @@
+C:\Users\brayi\source\repos\Bareiss\UI\bin\Debug\UI.exe.config
+C:\Users\brayi\source\repos\Bareiss\UI\bin\Debug\UI.exe
+C:\Users\brayi\source\repos\Bareiss\UI\bin\Debug\UI.pdb
+C:\Users\brayi\source\repos\Bareiss\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+C:\Users\brayi\source\repos\Bareiss\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\brayi\source\repos\Bareiss\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+C:\Users\brayi\source\repos\Bareiss\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\brayi\source\repos\Bareiss\UI\obj\Debug\UI.exe
+C:\Users\brayi\source\repos\Bareiss\UI\obj\Debug\UI.pdb
+C:\Users\brayi\source\repos\Bareiss\UI\obj\Debug\UI.Main.resources
