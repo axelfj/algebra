@@ -8,9 +8,9 @@ namespace UI
 {
     class AlgoritmoBareiss
     {
-        public void EjecutarBareiss(int[,] matrizInicial, int n)
+        public List<double[,]> EjecutarBareiss(double[,] matrizInicial, int n)
         {
-            List<int[,]> nMatrices = new List<int[,]>();
+            List<double[,]> nMatrices = new List<double[,]>();
 
             nMatrices.Add(matrizInicial);
 
@@ -18,9 +18,9 @@ namespace UI
 
             for (int i = 1; i < n; i++)
             {
-                int[,] matrizGenerada = new int[n,n + 1];
+                double[,] matrizGenerada = new double[n,n + 1];
 
-                int[,] matrizAnterior = nMatrices[i - 1];
+                double[,] matrizAnterior = nMatrices[i - 1];
 
                 //Copia las filas generadas de la matriz anterior
                 for (int k = 0; k < i; k++)
@@ -31,7 +31,7 @@ namespace UI
                     }
                 }
 
-                int pivoteActual = matrizGenerada[i - 1, i - 1];
+                int pivoteActual = (int)matrizGenerada[i - 1, i - 1];
 
                 for (int k = i; k < n; k++)
                 {
@@ -42,9 +42,39 @@ namespace UI
                 }
 
                 nMatrices.Add(matrizGenerada);
-
                 pivoteAnterior = pivoteActual;
             }
+
+            double[,] determinante = new double[1, 1];
+
+            determinante[0, 0] = nMatrices.Last()[n - 1, n - 1];
+
+            nMatrices.Add(determinante);
+
+            double[,] ecuacionesSolucion = new double[1, n];
+
+            double[,] conjuntoSolucion = new double[1, n];
+
+            for (int k = n; k > 0; k--)
+            {
+                double sumatoria = 0;
+
+                for (int j = k; j < n; j++)
+                {
+                    sumatoria = sumatoria + (nMatrices[k - 1][k - 1, j] * ecuacionesSolucion[0, j]);
+                }
+
+                ecuacionesSolucion[0, k - 1] = ((determinante[0, 0] * nMatrices[k - 1][k - 1, n]) - sumatoria) / nMatrices[k - 1][k - 1, k - 1];
+            }
+
+            for (int k = 0; k < n; k++)
+            {
+                conjuntoSolucion[0, k] = ecuacionesSolucion[0, k] / determinante[0, 0];
+            }
+
+            nMatrices.Add(conjuntoSolucion);
+
+            return nMatrices;
         }
     }
 }

@@ -18,113 +18,125 @@ namespace UI
             InitializeComponent();
             this.MinimizeBox = false;
             this.MaximizeBox = false;
-            this.cmbxEcuaciones.SelectedIndex = 0;
+            this.cmbxEcuaciones.SelectedIndex = 3;
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             int n = Convert.ToInt32(cmbxEcuaciones.SelectedItem);
-            int[,] matriz = new int[n, n + 1];
+            double[,] matrizInicial = new double[n, n + 1];
 
             switch (n)
             {
                 case 1:
-                    matriz[0, 0] = Convert.ToInt32(txtMatriz11.Text);
-                    matriz[0, 1] = Convert.ToInt32(txtMatriz16.Text);
+                    matrizInicial[0, 0] = Convert.ToInt32(txtMatriz11.Text);
+                    matrizInicial[0, 1] = Convert.ToInt32(txtMatriz16.Text);
                     break;
                 case 2:
-                    matriz[0, 0] = Convert.ToInt32(txtMatriz11.Text);
-                    matriz[0, 1] = Convert.ToInt32(txtMatriz12.Text);
-                    matriz[0, 2] = Convert.ToInt32(txtMatriz16.Text);
+                    matrizInicial[0, 0] = Convert.ToInt32(txtMatriz11.Text);
+                    matrizInicial[0, 1] = Convert.ToInt32(txtMatriz12.Text);
+                    matrizInicial[0, 2] = Convert.ToInt32(txtMatriz16.Text);
 
-                    matriz[1, 0] = Convert.ToInt32(txtMatriz21.Text);
-                    matriz[1, 1] = Convert.ToInt32(txtMatriz22.Text);
-                    matriz[1, 2] = Convert.ToInt32(txtMatriz26.Text);
+                    matrizInicial[1, 0] = Convert.ToInt32(txtMatriz21.Text);
+                    matrizInicial[1, 1] = Convert.ToInt32(txtMatriz22.Text);
+                    matrizInicial[1, 2] = Convert.ToInt32(txtMatriz26.Text);
 
                     break;
                 case 3:
-                    matriz[0, 0] = Convert.ToInt32(txtMatriz11.Text);
-                    matriz[0, 1] = Convert.ToInt32(txtMatriz12.Text);
-                    matriz[0, 2] = Convert.ToInt32(txtMatriz13.Text);
-                    matriz[0, 3] = Convert.ToInt32(txtMatriz16.Text);
+                    matrizInicial[0, 0] = Convert.ToInt32(txtMatriz11.Text);
+                    matrizInicial[0, 1] = Convert.ToInt32(txtMatriz12.Text);
+                    matrizInicial[0, 2] = Convert.ToInt32(txtMatriz13.Text);
+                    matrizInicial[0, 3] = Convert.ToInt32(txtMatriz16.Text);
 
-                    matriz[1, 0] = Convert.ToInt32(txtMatriz21.Text);
-                    matriz[1, 1] = Convert.ToInt32(txtMatriz22.Text);
-                    matriz[1, 2] = Convert.ToInt32(txtMatriz23.Text);
-                    matriz[1, 3] = Convert.ToInt32(txtMatriz26.Text);
+                    matrizInicial[1, 0] = Convert.ToInt32(txtMatriz21.Text);
+                    matrizInicial[1, 1] = Convert.ToInt32(txtMatriz22.Text);
+                    matrizInicial[1, 2] = Convert.ToInt32(txtMatriz23.Text);
+                    matrizInicial[1, 3] = Convert.ToInt32(txtMatriz26.Text);
 
-                    matriz[2, 0] = Convert.ToInt32(txtMatriz31.Text);
-                    matriz[2, 1] = Convert.ToInt32(txtMatriz32.Text);
-                    matriz[2, 2] = Convert.ToInt32(txtMatriz33.Text);
-                    matriz[2, 3] = Convert.ToInt32(txtMatriz36.Text);
+                    matrizInicial[2, 0] = Convert.ToInt32(txtMatriz31.Text);
+                    matrizInicial[2, 1] = Convert.ToInt32(txtMatriz32.Text);
+                    matrizInicial[2, 2] = Convert.ToInt32(txtMatriz33.Text);
+                    matrizInicial[2, 3] = Convert.ToInt32(txtMatriz36.Text);
                     break;
                 case 4:
-                    matriz[0, 0] = Convert.ToInt32(txtMatriz11.Text);
-                    matriz[0, 1] = Convert.ToInt32(txtMatriz12.Text);
-                    matriz[0, 2] = Convert.ToInt32(txtMatriz13.Text);
-                    matriz[0, 3] = Convert.ToInt32(txtMatriz14.Text);
-                    matriz[0, 4] = Convert.ToInt32(txtMatriz16.Text);
+                    matrizInicial[0, 0] = Convert.ToInt32(txtMatriz11.Text);
+                    matrizInicial[0, 1] = Convert.ToInt32(txtMatriz12.Text);
+                    matrizInicial[0, 2] = Convert.ToInt32(txtMatriz13.Text);
+                    matrizInicial[0, 3] = Convert.ToInt32(txtMatriz14.Text);
+                    matrizInicial[0, 4] = Convert.ToInt32(txtMatriz16.Text);
 
-                    matriz[1, 0] = Convert.ToInt32(txtMatriz21.Text);
-                    matriz[1, 1] = Convert.ToInt32(txtMatriz22.Text);
-                    matriz[1, 2] = Convert.ToInt32(txtMatriz23.Text);
-                    matriz[1, 3] = Convert.ToInt32(txtMatriz24.Text);
-                    matriz[1, 4] = Convert.ToInt32(txtMatriz26.Text);
+                    matrizInicial[1, 0] = Convert.ToInt32(txtMatriz21.Text);
+                    matrizInicial[1, 1] = Convert.ToInt32(txtMatriz22.Text);
+                    matrizInicial[1, 2] = Convert.ToInt32(txtMatriz23.Text);
+                    matrizInicial[1, 3] = Convert.ToInt32(txtMatriz24.Text);
+                    matrizInicial[1, 4] = Convert.ToInt32(txtMatriz26.Text);
 
-                    matriz[2, 0] = Convert.ToInt32(txtMatriz31.Text);
-                    matriz[2, 1] = Convert.ToInt32(txtMatriz32.Text);
-                    matriz[2, 2] = Convert.ToInt32(txtMatriz33.Text);
-                    matriz[2, 3] = Convert.ToInt32(txtMatriz34.Text);
-                    matriz[2, 4] = Convert.ToInt32(txtMatriz36.Text);
+                    matrizInicial[2, 0] = Convert.ToInt32(txtMatriz31.Text);
+                    matrizInicial[2, 1] = Convert.ToInt32(txtMatriz32.Text);
+                    matrizInicial[2, 2] = Convert.ToInt32(txtMatriz33.Text);
+                    matrizInicial[2, 3] = Convert.ToInt32(txtMatriz34.Text);
+                    matrizInicial[2, 4] = Convert.ToInt32(txtMatriz36.Text);
 
-                    matriz[3, 0] = Convert.ToInt32(txtMatriz41.Text);
-                    matriz[3, 1] = Convert.ToInt32(txtMatriz42.Text);
-                    matriz[3, 2] = Convert.ToInt32(txtMatriz43.Text);
-                    matriz[3, 3] = Convert.ToInt32(txtMatriz44.Text);
-                    matriz[3, 4] = Convert.ToInt32(txtMatriz46.Text);
+                    matrizInicial[3, 0] = Convert.ToInt32(txtMatriz41.Text);
+                    matrizInicial[3, 1] = Convert.ToInt32(txtMatriz42.Text);
+                    matrizInicial[3, 2] = Convert.ToInt32(txtMatriz43.Text);
+                    matrizInicial[3, 3] = Convert.ToInt32(txtMatriz44.Text);
+                    matrizInicial[3, 4] = Convert.ToInt32(txtMatriz46.Text);
                     break;
                 case 5:
 
-                    matriz[0, 0] = Convert.ToInt32(txtMatriz11.Text);
-                    matriz[0, 1] = Convert.ToInt32(txtMatriz12.Text);
-                    matriz[0, 2] = Convert.ToInt32(txtMatriz13.Text);
-                    matriz[0, 3] = Convert.ToInt32(txtMatriz14.Text);
-                    matriz[0, 4] = Convert.ToInt32(txtMatriz15.Text);
-                    matriz[0, 5] = Convert.ToInt32(txtMatriz16.Text);
+                    matrizInicial[0, 0] = Convert.ToInt32(txtMatriz11.Text);
+                    matrizInicial[0, 1] = Convert.ToInt32(txtMatriz12.Text);
+                    matrizInicial[0, 2] = Convert.ToInt32(txtMatriz13.Text);
+                    matrizInicial[0, 3] = Convert.ToInt32(txtMatriz14.Text);
+                    matrizInicial[0, 4] = Convert.ToInt32(txtMatriz15.Text);
+                    matrizInicial[0, 5] = Convert.ToInt32(txtMatriz16.Text);
 
-                    matriz[1, 0] = Convert.ToInt32(txtMatriz21.Text);
-                    matriz[1, 1] = Convert.ToInt32(txtMatriz22.Text);
-                    matriz[1, 2] = Convert.ToInt32(txtMatriz23.Text);
-                    matriz[1, 3] = Convert.ToInt32(txtMatriz24.Text);
-                    matriz[1, 4] = Convert.ToInt32(txtMatriz25.Text);
-                    matriz[1, 5] = Convert.ToInt32(txtMatriz26.Text);
+                    matrizInicial[1, 0] = Convert.ToInt32(txtMatriz21.Text);
+                    matrizInicial[1, 1] = Convert.ToInt32(txtMatriz22.Text);
+                    matrizInicial[1, 2] = Convert.ToInt32(txtMatriz23.Text);
+                    matrizInicial[1, 3] = Convert.ToInt32(txtMatriz24.Text);
+                    matrizInicial[1, 4] = Convert.ToInt32(txtMatriz25.Text);
+                    matrizInicial[1, 5] = Convert.ToInt32(txtMatriz26.Text);
 
-                    matriz[2, 0] = Convert.ToInt32(txtMatriz31.Text);
-                    matriz[2, 1] = Convert.ToInt32(txtMatriz32.Text);
-                    matriz[2, 2] = Convert.ToInt32(txtMatriz33.Text);
-                    matriz[2, 3] = Convert.ToInt32(txtMatriz34.Text);
-                    matriz[2, 4] = Convert.ToInt32(txtMatriz35.Text);
-                    matriz[2, 5] = Convert.ToInt32(txtMatriz36.Text);
+                    matrizInicial[2, 0] = Convert.ToInt32(txtMatriz31.Text);
+                    matrizInicial[2, 1] = Convert.ToInt32(txtMatriz32.Text);
+                    matrizInicial[2, 2] = Convert.ToInt32(txtMatriz33.Text);
+                    matrizInicial[2, 3] = Convert.ToInt32(txtMatriz34.Text);
+                    matrizInicial[2, 4] = Convert.ToInt32(txtMatriz35.Text);
+                    matrizInicial[2, 5] = Convert.ToInt32(txtMatriz36.Text);
 
-                    matriz[3, 0] = Convert.ToInt32(txtMatriz41.Text);
-                    matriz[3, 1] = Convert.ToInt32(txtMatriz42.Text);
-                    matriz[3, 2] = Convert.ToInt32(txtMatriz43.Text);
-                    matriz[3, 3] = Convert.ToInt32(txtMatriz44.Text);
-                    matriz[3, 4] = Convert.ToInt32(txtMatriz45.Text);
-                    matriz[3, 5] = Convert.ToInt32(txtMatriz46.Text);
+                    matrizInicial[3, 0] = Convert.ToInt32(txtMatriz41.Text);
+                    matrizInicial[3, 1] = Convert.ToInt32(txtMatriz42.Text);
+                    matrizInicial[3, 2] = Convert.ToInt32(txtMatriz43.Text);
+                    matrizInicial[3, 3] = Convert.ToInt32(txtMatriz44.Text);
+                    matrizInicial[3, 4] = Convert.ToInt32(txtMatriz45.Text);
+                    matrizInicial[3, 5] = Convert.ToInt32(txtMatriz46.Text);
 
-                    matriz[4, 0] = Convert.ToInt32(txtMatriz51.Text);
-                    matriz[4, 1] = Convert.ToInt32(txtMatriz52.Text);
-                    matriz[4, 2] = Convert.ToInt32(txtMatriz53.Text);
-                    matriz[4, 3] = Convert.ToInt32(txtMatriz54.Text);
-                    matriz[4, 4] = Convert.ToInt32(txtMatriz55.Text);
-                    matriz[4, 5] = Convert.ToInt32(txtMatriz56.Text);
+                    matrizInicial[4, 0] = Convert.ToInt32(txtMatriz51.Text);
+                    matrizInicial[4, 1] = Convert.ToInt32(txtMatriz52.Text);
+                    matrizInicial[4, 2] = Convert.ToInt32(txtMatriz53.Text);
+                    matrizInicial[4, 3] = Convert.ToInt32(txtMatriz54.Text);
+                    matrizInicial[4, 4] = Convert.ToInt32(txtMatriz55.Text);
+                    matrizInicial[4, 5] = Convert.ToInt32(txtMatriz56.Text);
                     break;
             }
 
-            AlgoritmoBareiss ab = new AlgoritmoBareiss();
+            AlgoritmoBareiss miAlgoritmo = new AlgoritmoBareiss();
 
-            ab.EjecutarBareiss(matriz, n);
+            List<double[,]> listaResultado = miAlgoritmo.EjecutarBareiss(matrizInicial, n);
+
+            string resultado = "";
+
+            foreach(double[,] v in listaResultado)
+            {
+                foreach(double num in v)
+                {
+                    resultado = resultado + num;
+                }
+            }
+
+            txtResultado.Text = resultado;
         }
 
         private void txtMatriz_TextChanged(object sender, EventArgs e)
@@ -259,6 +271,7 @@ namespace UI
                     txtMatriz55.ReadOnly = true;
                     txtMatriz56.ReadOnly = true;
                     break;
+
                 case "2":
                     txtMatriz13.ReadOnly = true;
                     txtMatriz14.ReadOnly = true;
@@ -289,6 +302,7 @@ namespace UI
                     txtMatriz55.ReadOnly = true;
                     txtMatriz56.ReadOnly = true;
                     break;
+
                 case "3":
                     txtMatriz14.ReadOnly = true;
                     txtMatriz15.ReadOnly = true;
@@ -313,6 +327,7 @@ namespace UI
                     txtMatriz55.ReadOnly = true;
                     txtMatriz56.ReadOnly = true;
                     break;
+
                 case "4":
                     txtMatriz15.ReadOnly = true;
 
@@ -330,6 +345,30 @@ namespace UI
                     txtMatriz56.ReadOnly = true;
                     break;
             }
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            txtMatriz11.Text = Convert.ToString(3);
+            txtMatriz12.Text = Convert.ToString(4);
+            txtMatriz13.Text = Convert.ToString(6);
+            txtMatriz14.Text = Convert.ToString(1);
+            txtMatriz16.Text = Convert.ToString(2);
+            txtMatriz21.Text = Convert.ToString(4);
+            txtMatriz22.Text = Convert.ToString(6);
+            txtMatriz23.Text = Convert.ToString(6);
+            txtMatriz24.Text = Convert.ToString(5);
+            txtMatriz26.Text = Convert.ToString(2);
+            txtMatriz31.Text = Convert.ToString(1);
+            txtMatriz32.Text = Convert.ToString(0);
+            txtMatriz33.Text = Convert.ToString(0);
+            txtMatriz34.Text = Convert.ToString(3);
+            txtMatriz36.Text = Convert.ToString(1);
+            txtMatriz41.Text = Convert.ToString(1);
+            txtMatriz42.Text = Convert.ToString(2);
+            txtMatriz43.Text = Convert.ToString(0);
+            txtMatriz44.Text = Convert.ToString(3);
+            txtMatriz46.Text = Convert.ToString(1);
         }
     }
 }
