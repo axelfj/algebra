@@ -7,3 +7,4 @@ D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\obj\Release\UI.csproj.Gener
 D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\obj\Release\UI.csproj.CoreCompileInputs.cache
 D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\obj\Release\UI.exe
 D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\obj\Release\UI.pdb
+D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\obj\Release\UI.csprojResolveAssemblyReference.cache

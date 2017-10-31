@@ -23,7 +23,7 @@ namespace UI
             InitializeComponent();
             this.MinimizeBox = false;
             this.MaximizeBox = false;
-            this.cmbxEcuaciones.SelectedIndex = 3;
+            this.cmbxEcuaciones.SelectedIndex = 1;
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -363,26 +363,7 @@ namespace UI
 
         private void Main_Load(object sender, EventArgs e)
         {
-            txtMatriz11.Text = Convert.ToString(3);
-            txtMatriz12.Text = Convert.ToString(4);
-            txtMatriz13.Text = Convert.ToString(6);
-            txtMatriz14.Text = Convert.ToString(1);
-            txtMatriz16.Text = Convert.ToString(2);
-            txtMatriz21.Text = Convert.ToString(4);
-            txtMatriz22.Text = Convert.ToString(6);
-            txtMatriz23.Text = Convert.ToString(6);
-            txtMatriz24.Text = Convert.ToString(5);
-            txtMatriz26.Text = Convert.ToString(2);
-            txtMatriz31.Text = Convert.ToString(1);
-            txtMatriz32.Text = Convert.ToString(0);
-            txtMatriz33.Text = Convert.ToString(0);
-            txtMatriz34.Text = Convert.ToString(3);
-            txtMatriz36.Text = Convert.ToString(1);
-            txtMatriz41.Text = Convert.ToString(1);
-            txtMatriz42.Text = Convert.ToString(2);
-            txtMatriz43.Text = Convert.ToString(0);
-            txtMatriz44.Text = Convert.ToString(3);
-            txtMatriz46.Text = Convert.ToString(1);
+       
         }
 
         private void imprimirSolucion(List<double[,]> nMatrices, int n)
