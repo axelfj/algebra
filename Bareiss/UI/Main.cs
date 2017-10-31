@@ -23,7 +23,7 @@ namespace UI
             InitializeComponent();
             this.MinimizeBox = false;
             this.MaximizeBox = false;
-            this.cmbxEcuaciones.SelectedIndex = 1;
+            this.cmbxEcuaciones.SelectedIndex = 0;
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)

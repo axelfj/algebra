@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblInstruccion1 = new System.Windows.Forms.Label();
             this.cmbxEcuaciones = new System.Windows.Forms.ComboBox();
@@ -423,6 +424,7 @@
             // 
             this.lblMatrizA0.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblMatrizA0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMatrizA0.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMatrizA0.Location = new System.Drawing.Point(157, 258);
             this.lblMatrizA0.Name = "lblMatrizA0";
             this.lblMatrizA0.Size = new System.Drawing.Size(134, 102);
@@ -433,6 +435,7 @@
             // 
             this.lblMatrizA1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblMatrizA1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMatrizA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMatrizA1.Location = new System.Drawing.Point(331, 258);
             this.lblMatrizA1.Name = "lblMatrizA1";
             this.lblMatrizA1.Size = new System.Drawing.Size(134, 102);
@@ -443,6 +446,7 @@
             // 
             this.lblMatrizA2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblMatrizA2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMatrizA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMatrizA2.Location = new System.Drawing.Point(494, 258);
             this.lblMatrizA2.Name = "lblMatrizA2";
             this.lblMatrizA2.Size = new System.Drawing.Size(134, 102);
@@ -453,6 +457,7 @@
             // 
             this.lblMatrizA3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblMatrizA3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMatrizA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMatrizA3.Location = new System.Drawing.Point(674, 258);
             this.lblMatrizA3.Name = "lblMatrizA3";
             this.lblMatrizA3.Size = new System.Drawing.Size(134, 102);
@@ -463,6 +468,7 @@
             // 
             this.lblMatrizA4.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblMatrizA4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMatrizA4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMatrizA4.Location = new System.Drawing.Point(843, 258);
             this.lblMatrizA4.Name = "lblMatrizA4";
             this.lblMatrizA4.Size = new System.Drawing.Size(134, 102);
@@ -539,7 +545,7 @@
             this.lblDet.AutoSize = true;
             this.lblDet.BackColor = System.Drawing.SystemColors.Control;
             this.lblDet.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDet.Location = new System.Drawing.Point(62, 447);
+            this.lblDet.Location = new System.Drawing.Point(240, 429);
             this.lblDet.Name = "lblDet";
             this.lblDet.Size = new System.Drawing.Size(289, 38);
             this.lblDet.TabIndex = 52;
@@ -551,7 +557,7 @@
             this.lblConjuntoSolucion.AutoSize = true;
             this.lblConjuntoSolucion.BackColor = System.Drawing.SystemColors.Control;
             this.lblConjuntoSolucion.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConjuntoSolucion.Location = new System.Drawing.Point(417, 447);
+            this.lblConjuntoSolucion.Location = new System.Drawing.Point(151, 508);
             this.lblConjuntoSolucion.Name = "lblConjuntoSolucion";
             this.lblConjuntoSolucion.Size = new System.Drawing.Size(378, 38);
             this.lblConjuntoSolucion.TabIndex = 53;
@@ -616,6 +622,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "Algoritmo de Bareiss";
             this.Load += new System.EventHandler(this.Main_Load);
