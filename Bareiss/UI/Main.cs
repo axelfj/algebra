@@ -18,6 +18,8 @@ namespace UI
         private string mensajeDeterminante = "El determinante es: ";
         private string mensajeSistema = "El conjunto de solución es: ";
 
+        private void Main_Load(object sender, EventArgs e) { }
+
         public Main()
         {
             InitializeComponent();
@@ -361,10 +363,7 @@ namespace UI
             }
         }
 
-        private void Main_Load(object sender, EventArgs e)
-        {
-       
-        }
+        
 
         private void imprimirSolucion(List<double[,]> nMatrices, int n)
         {
