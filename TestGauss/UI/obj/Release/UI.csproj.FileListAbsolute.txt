@@ -1,0 +1,10 @@
+D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\bin\Release\UI.exe.config
+D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\bin\Release\UI.exe
+D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\bin\Release\UI.pdb
+D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\obj\Release\UI.Main.resources
+D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\obj\Release\UI.Properties.Resources.resources
+D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\obj\Release\UI.csproj.GenerateResource.Cache
+D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\obj\Release\UI.csproj.CoreCompileInputs.cache
+D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\obj\Release\UI.exe
+D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\obj\Release\UI.pdb
+D:\Datos\Documents\GitHub\Project-Algebra\Bareiss\UI\obj\Release\UI.csprojResolveAssemblyReference.cache
