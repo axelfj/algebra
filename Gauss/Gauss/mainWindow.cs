@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Gauss
 {
-    public partial class Form1 : Form
+    public partial class mainWindow : Form
     {
-        public Form1()
+        public mainWindow()
         {
             InitializeComponent();
+            cleanMatrix();
+        }
+
+        private void cleanMatrix()
+        {
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -33,6 +39,11 @@ namespace Gauss
         }
 
         private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }

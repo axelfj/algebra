@@ -8,3 +8,13 @@ D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\Gauss\obj\Debug\G
 D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\Gauss\obj\Debug\Gauss.csproj.CoreCompileInputs.cache
 D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\Gauss\obj\Debug\Gauss.exe
 D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\Gauss\obj\Debug\Gauss.pdb
+D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\bin\Debug\Gauss.exe.config
+D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\bin\Debug\Gauss.exe
+D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\bin\Debug\Gauss.pdb
+D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.csprojResolveAssemblyReference.cache
+D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.mainWindow.resources
+D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.Properties.Resources.resources
+D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.csproj.GenerateResource.Cache
+D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.csproj.CoreCompileInputs.cache
+D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.exe
+D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.pdb
