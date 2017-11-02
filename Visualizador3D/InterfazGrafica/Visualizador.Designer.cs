@@ -69,7 +69,7 @@
             // 
             // trbrEjeZ
             // 
-            this.trbrEjeZ.Location = new System.Drawing.Point(12, 451);
+            this.trbrEjeZ.Location = new System.Drawing.Point(12, 669);
             this.trbrEjeZ.Maximum = 628;
             this.trbrEjeZ.Name = "trbrEjeZ";
             this.trbrEjeZ.Size = new System.Drawing.Size(520, 45);
@@ -81,7 +81,7 @@
             // 
             this.lblRotarZ.AutoSize = true;
             this.lblRotarZ.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRotarZ.Location = new System.Drawing.Point(196, 499);
+            this.lblRotarZ.Location = new System.Drawing.Point(198, 717);
             this.lblRotarZ.Name = "lblRotarZ";
             this.lblRotarZ.Size = new System.Drawing.Size(146, 23);
             this.lblRotarZ.TabIndex = 1;
@@ -390,7 +390,7 @@
             this.canvas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.canvas.Location = new System.Drawing.Point(12, 177);
             this.canvas.Name = "canvas";
-            this.canvas.Size = new System.Drawing.Size(520, 268);
+            this.canvas.Size = new System.Drawing.Size(520, 486);
             this.canvas.TabIndex = 34;
             this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.Canvas_Paint);
             // 
@@ -409,7 +409,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 541);
+            this.ClientSize = new System.Drawing.Size(544, 749);
             this.Controls.Add(this.btnDibujar);
             this.Controls.Add(this.canvas);
             this.Controls.Add(this.lblW3);
