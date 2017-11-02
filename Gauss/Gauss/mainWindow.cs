@@ -18,26 +18,15 @@ namespace Gauss
             this.dimensions.SelectedIndex = 0;
         }
 
+        private void lblTitulo_Click(object sender, EventArgs e){}
 
-
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void textBox2_TextChanged(object sender, EventArgs e){}
 
         private void mainWindow_Load(object sender, EventArgs e){}
 
         private void label3_Click_1(object sender, EventArgs e){}
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        private void button1_Click_1(object sender, EventArgs e){}
 
         private void button1_Click_2(object sender, EventArgs e)
         {
@@ -81,15 +70,6 @@ namespace Gauss
             result3.Text = "";
             result4.Text = "";
             result5.Text = "";
-        }
-
-        private void applyButton_Click(object sender, EventArgs e)
-        {
-            string parser = operationBox.Text;
-            int[,] matrix = toMatrix();
-            historyMatrix.Text = Convert.ToString(matrix);
-            //historyMatrix.Text = "Operación:\t" + parser;
-            operationBox.Text = "";
         }
 
         private int[,] toMatrix()
@@ -1077,13 +1057,32 @@ namespace Gauss
             }
         }
 
-        private void historyMatrix_TextChanged(object sender, EventArgs e)
-        {
+        private void historyMatrix_TextChanged(object sender, EventArgs e){}
 
-        }
-
-        private void scrollHistory_Scroll(object sender, ScrollEventArgs e)
+        private void scrollHistory_Scroll(object sender, ScrollEventArgs e){}
+        
+        private void applyButton_Click(object sender, EventArgs e)
         {
+            string operationParser = operationBox.Text;
+            string dimensionsParser = dimensions.Text;
+            int m = dimensionsParser[0] - 48;
+            int n = dimensionsParser[2] - 48;
+            int[,] matrix = toMatrix();
+
+            string toHistory = "";
+
+            for (int i = 0; i < m; i++)
+            {
+                string matrixRow = "";
+                for (int j = 0; j < n; j++)
+                {
+                    matrixRow += Convert.ToString(matrix[i, j]) + "-";
+                }
+                toHistory += matrixRow + "\n";
+            }
+
+            historyMatrix.Text = toHistory;
+            operationBox.Text = "";
         }
     }
 }
