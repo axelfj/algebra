@@ -78,6 +78,7 @@
             this.scrollHistory.Name = "scrollHistory";
             this.scrollHistory.Size = new System.Drawing.Size(17, 236);
             this.scrollHistory.TabIndex = 2;
+            this.scrollHistory.Scroll += new System.Windows.Forms.ScrollEventHandler(this.scrollHistory_Scroll);
             // 
             // historyMatrix
             // 
@@ -86,6 +87,7 @@
             this.historyMatrix.Name = "historyMatrix";
             this.historyMatrix.Size = new System.Drawing.Size(330, 236);
             this.historyMatrix.TabIndex = 3;
+            this.historyMatrix.TextChanged += new System.EventHandler(this.historyMatrix_TextChanged);
             // 
             // operationBox
             // 

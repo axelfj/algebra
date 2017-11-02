@@ -86,24 +86,329 @@ namespace Gauss
         private void applyButton_Click(object sender, EventArgs e)
         {
             string parser = operationBox.Text;
-            toMatrix();
+            int[,] matrix = toMatrix();
+            historyMatrix.Text = Convert.ToString(matrix);
             //historyMatrix.Text = "Operación:\t" + parser;
             operationBox.Text = "";
         }
 
-        private void toMatrix()
+        private int[,] toMatrix()
         {
             string parser = dimensions.Text;
 
             int m = parser[0] - 48;
             int n = parser[2] - 48;
 
-            
+            int[,] matrix = new int[m, n];
+
+            switch (m)
+            {
+                case 1:
+                    switch (n)
+                    {
+                        case 1:
+                            matrix[0,0] = Convert.ToInt32(matrix11.Text);
+                            break;
+                        case 2:
+                            matrix[0,0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0,1] = Convert.ToInt32(matrix12.Text);
+                            break;
+                        case 3:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            break;
+                        case 4:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[0, 3] = Convert.ToInt32(matrix14.Text);
+                            break;
+                        case 5:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[0, 3] = Convert.ToInt32(matrix14.Text);
+                            matrix[0, 4] = Convert.ToInt32(matrix15.Text);
+                            break;
+                    }
+                    break;
+                case 2:
+                    switch (n)
+                    {
+                        case 1:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            break;
+                        case 2:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            break;
+                        case 3:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[1, 2] = Convert.ToInt32(matrix23.Text);
+                            break;
+                        case 4:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[0, 3] = Convert.ToInt32(matrix14.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[1, 2] = Convert.ToInt32(matrix23.Text);
+                            matrix[1, 3] = Convert.ToInt32(matrix24.Text);
+                            break;
+                        case 5:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[0, 3] = Convert.ToInt32(matrix14.Text);
+                            matrix[0, 4] = Convert.ToInt32(matrix15.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[1, 2] = Convert.ToInt32(matrix23.Text);
+                            matrix[1, 3] = Convert.ToInt32(matrix24.Text);
+                            matrix[1, 4] = Convert.ToInt32(matrix25.Text);
+                            break;
+                    }
+                    break;
+                case 3:
+                    switch (n)
+                    {
+                        case 1:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            break;
+                        case 2:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[2, 1] = Convert.ToInt32(matrix32.Text);
+                            break;
+                        case 3:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[1, 2] = Convert.ToInt32(matrix23.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[2, 1] = Convert.ToInt32(matrix32.Text);
+                            matrix[2, 2] = Convert.ToInt32(matrix33.Text);
+                            break;
+                        case 4:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[0, 3] = Convert.ToInt32(matrix14.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[1, 2] = Convert.ToInt32(matrix23.Text);
+                            matrix[1, 3] = Convert.ToInt32(matrix24.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[2, 1] = Convert.ToInt32(matrix32.Text);
+                            matrix[2, 2] = Convert.ToInt32(matrix33.Text);
+                            matrix[2, 3] = Convert.ToInt32(matrix34.Text);
+                            break;
+                        case 5:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[0, 3] = Convert.ToInt32(matrix14.Text);
+                            matrix[0, 4] = Convert.ToInt32(matrix15.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[1, 2] = Convert.ToInt32(matrix23.Text);
+                            matrix[1, 3] = Convert.ToInt32(matrix24.Text);
+                            matrix[1, 4] = Convert.ToInt32(matrix25.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[2, 1] = Convert.ToInt32(matrix32.Text);
+                            matrix[2, 2] = Convert.ToInt32(matrix33.Text);
+                            matrix[2, 3] = Convert.ToInt32(matrix34.Text);
+                            matrix[2, 4] = Convert.ToInt32(matrix35.Text);
+                            break;
+                    }
+                    break;
+                case 4:
+                    switch (n)
+                    {
+                        case 1:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[3, 0] = Convert.ToInt32(matrix41.Text);
+                            break;
+                        case 2:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[2, 1] = Convert.ToInt32(matrix32.Text);
+                            matrix[3, 0] = Convert.ToInt32(matrix41.Text);
+                            matrix[3, 1] = Convert.ToInt32(matrix42.Text);
+                            break;
+                        case 3:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[1, 2] = Convert.ToInt32(matrix23.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[2, 1] = Convert.ToInt32(matrix32.Text);
+                            matrix[2, 2] = Convert.ToInt32(matrix33.Text);
+                            matrix[3, 0] = Convert.ToInt32(matrix41.Text);
+                            matrix[3, 1] = Convert.ToInt32(matrix42.Text);
+                            matrix[3, 2] = Convert.ToInt32(matrix43.Text);
+                            break;
+                        case 4:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[0, 3] = Convert.ToInt32(matrix14.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[1, 2] = Convert.ToInt32(matrix23.Text);
+                            matrix[1, 3] = Convert.ToInt32(matrix24.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[2, 1] = Convert.ToInt32(matrix32.Text);
+                            matrix[2, 2] = Convert.ToInt32(matrix33.Text);
+                            matrix[2, 3] = Convert.ToInt32(matrix34.Text);
+                            matrix[3, 0] = Convert.ToInt32(matrix41.Text);
+                            matrix[3, 1] = Convert.ToInt32(matrix42.Text);
+                            matrix[3, 2] = Convert.ToInt32(matrix43.Text);
+                            matrix[3, 3] = Convert.ToInt32(matrix44.Text);
+                            break;
+                        case 5:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[0, 3] = Convert.ToInt32(matrix14.Text);
+                            matrix[0, 4] = Convert.ToInt32(matrix15.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[1, 2] = Convert.ToInt32(matrix23.Text);
+                            matrix[1, 3] = Convert.ToInt32(matrix24.Text);
+                            matrix[1, 4] = Convert.ToInt32(matrix25.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[2, 1] = Convert.ToInt32(matrix32.Text);
+                            matrix[2, 2] = Convert.ToInt32(matrix33.Text);
+                            matrix[2, 3] = Convert.ToInt32(matrix34.Text);
+                            matrix[2, 4] = Convert.ToInt32(matrix35.Text);
+                            matrix[3, 0] = Convert.ToInt32(matrix41.Text);
+                            matrix[3, 1] = Convert.ToInt32(matrix42.Text);
+                            matrix[3, 2] = Convert.ToInt32(matrix43.Text);
+                            matrix[3, 3] = Convert.ToInt32(matrix44.Text);
+                            matrix[3, 4] = Convert.ToInt32(matrix45.Text);
+                            break;
+                    }
+                    break;
+                case 5:
+                    switch (n)
+                    {
+                        case 1:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[3, 0] = Convert.ToInt32(matrix41.Text);
+                            matrix[4, 0] = Convert.ToInt32(matrix51.Text);
+                            break;
+                        case 2:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[2, 1] = Convert.ToInt32(matrix32.Text);
+                            matrix[3, 0] = Convert.ToInt32(matrix41.Text);
+                            matrix[3, 1] = Convert.ToInt32(matrix42.Text);
+                            matrix[4, 0] = Convert.ToInt32(matrix51.Text);
+                            matrix[4, 1] = Convert.ToInt32(matrix52.Text);
+                            break;
+                        case 3:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[1, 2] = Convert.ToInt32(matrix23.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[2, 1] = Convert.ToInt32(matrix32.Text);
+                            matrix[2, 2] = Convert.ToInt32(matrix33.Text);
+                            matrix[3, 0] = Convert.ToInt32(matrix41.Text);
+                            matrix[3, 1] = Convert.ToInt32(matrix42.Text);
+                            matrix[3, 2] = Convert.ToInt32(matrix43.Text);
+                            matrix[4, 0] = Convert.ToInt32(matrix51.Text);
+                            matrix[4, 1] = Convert.ToInt32(matrix52.Text);
+                            matrix[4, 2] = Convert.ToInt32(matrix53.Text);
+                            break;
+                        case 4:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[0, 3] = Convert.ToInt32(matrix14.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[1, 2] = Convert.ToInt32(matrix23.Text);
+                            matrix[1, 3] = Convert.ToInt32(matrix24.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[2, 1] = Convert.ToInt32(matrix32.Text);
+                            matrix[2, 2] = Convert.ToInt32(matrix33.Text);
+                            matrix[2, 3] = Convert.ToInt32(matrix34.Text);
+                            matrix[3, 0] = Convert.ToInt32(matrix41.Text);
+                            matrix[3, 1] = Convert.ToInt32(matrix42.Text);
+                            matrix[3, 2] = Convert.ToInt32(matrix43.Text);
+                            matrix[3, 3] = Convert.ToInt32(matrix44.Text);
+                            matrix[4, 0] = Convert.ToInt32(matrix51.Text);
+                            matrix[4, 1] = Convert.ToInt32(matrix52.Text);
+                            matrix[4, 2] = Convert.ToInt32(matrix53.Text);
+                            matrix[4, 3] = Convert.ToInt32(matrix54.Text);
+                            break;
+                        case 5:
+                            matrix[0, 0] = Convert.ToInt32(matrix11.Text);
+                            matrix[0, 1] = Convert.ToInt32(matrix12.Text);
+                            matrix[0, 2] = Convert.ToInt32(matrix13.Text);
+                            matrix[0, 3] = Convert.ToInt32(matrix14.Text);
+                            matrix[0, 4] = Convert.ToInt32(matrix15.Text);
+                            matrix[1, 0] = Convert.ToInt32(matrix21.Text);
+                            matrix[1, 1] = Convert.ToInt32(matrix22.Text);
+                            matrix[1, 2] = Convert.ToInt32(matrix23.Text);
+                            matrix[1, 3] = Convert.ToInt32(matrix24.Text);
+                            matrix[1, 4] = Convert.ToInt32(matrix25.Text);
+                            matrix[2, 0] = Convert.ToInt32(matrix31.Text);
+                            matrix[2, 1] = Convert.ToInt32(matrix32.Text);
+                            matrix[2, 2] = Convert.ToInt32(matrix33.Text);
+                            matrix[2, 3] = Convert.ToInt32(matrix34.Text);
+                            matrix[2, 4] = Convert.ToInt32(matrix35.Text);
+                            matrix[3, 0] = Convert.ToInt32(matrix41.Text);
+                            matrix[3, 1] = Convert.ToInt32(matrix42.Text);
+                            matrix[3, 2] = Convert.ToInt32(matrix43.Text);
+                            matrix[3, 3] = Convert.ToInt32(matrix44.Text);
+                            matrix[3, 4] = Convert.ToInt32(matrix45.Text);
+                            matrix[4, 0] = Convert.ToInt32(matrix51.Text);
+                            matrix[4, 1] = Convert.ToInt32(matrix52.Text);
+                            matrix[4, 2] = Convert.ToInt32(matrix53.Text);
+                            matrix[4, 3] = Convert.ToInt32(matrix54.Text);
+                            matrix[4, 4] = Convert.ToInt32(matrix55.Text);
+                            break;
+                    }
+                    break;
+            }
+            return matrix;
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-
         }
 
         private void dimensions_SelectedIndexChanged(object sender, EventArgs e)
@@ -770,6 +1075,15 @@ namespace Gauss
                     break;
 
             }
+        }
+
+        private void historyMatrix_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void scrollHistory_Scroll(object sender, ScrollEventArgs e)
+        {
         }
     }
 }
