@@ -30,6 +30,11 @@ namespace UI
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
+            lblMatrizA0.Text = "";
+            lblMatrizA1.Text = "";
+            lblMatrizA2.Text = "";
+            lblMatrizA3.Text = "";
+            lblMatrizA4.Text = "";
             int n = Convert.ToInt32(cmbxEcuaciones.SelectedItem);
             double[,] matrizInicial = new double[n, n + 1];
             try
