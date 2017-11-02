@@ -1,0 +1,10 @@
+C:\Users\diego\source\repos\Visualizador3D\InterfazGrafica\bin\Debug\InterfazGrafica.exe.config
+C:\Users\diego\source\repos\Visualizador3D\InterfazGrafica\bin\Debug\InterfazGrafica.exe
+C:\Users\diego\source\repos\Visualizador3D\InterfazGrafica\bin\Debug\InterfazGrafica.pdb
+C:\Users\diego\source\repos\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.csprojResolveAssemblyReference.cache
+C:\Users\diego\source\repos\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.Properties.Resources.resources
+C:\Users\diego\source\repos\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.Visualizador.resources
+C:\Users\diego\source\repos\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.csproj.GenerateResource.Cache
+C:\Users\diego\source\repos\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.csproj.CoreCompileInputs.cache
+C:\Users\diego\source\repos\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.exe
+C:\Users\diego\source\repos\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.pdb
