@@ -1195,7 +1195,7 @@ namespace Gauss
                 number = Convert.ToInt32(opParse[0]) - 48;
                 firstRow = Convert.ToInt32(opParse[2]) - 49;
                 matrix = productRow(matrix, number, firstRow);
-                toGui(matrix,firstRow);
+                toGui(matrix,firstRow, n);
             }
 
             if (opParse.Length == 6)
@@ -1204,7 +1204,7 @@ namespace Gauss
                 firstRow = Convert.ToInt32(opParse[2]) - 49;
                 secondRow = Convert.ToInt32(opParse[5]) - 49;
                 matrix = rowXrow(matrix, number, firstRow, secondRow);
-                toGui(matrix, secondRow);
+                toGui(matrix, secondRow, n);
             }
 
             if (opParse.Length == 5)
@@ -1214,8 +1214,8 @@ namespace Gauss
                     firstRow = Convert.ToInt32(opParse[1]) - 49;
                     secondRow = Convert.ToInt32(opParse[4]) - 49;
                     matrix = changeRows(matrix, firstRow, secondRow);
-                    toGui(matrix, firstRow);
-                    toGui(matrix, secondRow);
+                    toGui(matrix, firstRow, n);
+                    toGui(matrix, secondRow, n);
                 }
             }
 
@@ -1261,47 +1261,222 @@ namespace Gauss
             return matrix;
         }
 
-        private void toGui(int[,] matrix, int row)
+        private void toGui(int[,] matrix, int row, int columns)
         {
             if (row == 0)
             {
-                matrix11.Text = Convert.ToString(matrix[row, 0]);
-                matrix12.Text = Convert.ToString(matrix[row, 1]);
-                matrix13.Text = Convert.ToString(matrix[row, 2]);
-                matrix14.Text = Convert.ToString(matrix[row, 3]);
-                matrix15.Text = Convert.ToString(matrix[row, 4]);
+                if (columns == 1)
+                {
+                    matrix11.Text = Convert.ToString(matrix[row, 0]);
+                    
+                    result1.Text = Convert.ToString(matrix[row, 1]);
+                }
+                if (columns == 2)
+                {
+                    matrix11.Text = Convert.ToString(matrix[row, 0]);
+                    matrix12.Text = Convert.ToString(matrix[row, 1]);
+                    
+                    result1.Text = Convert.ToString(matrix[row, 2]);
+                }
+                if (columns == 3)
+                {
+                    matrix11.Text = Convert.ToString(matrix[row, 0]);
+                    matrix12.Text = Convert.ToString(matrix[row, 1]);
+                    matrix13.Text = Convert.ToString(matrix[row, 2]);
+                    
+                    result1.Text = Convert.ToString(matrix[row, 3]);
+                }
+                if (columns == 4)
+                {
+                    matrix11.Text = Convert.ToString(matrix[row, 0]);
+                    matrix12.Text = Convert.ToString(matrix[row, 1]);
+                    matrix13.Text = Convert.ToString(matrix[row, 2]);
+                    matrix14.Text = Convert.ToString(matrix[row, 3]);
+                    
+                    result1.Text = Convert.ToString(matrix[row, 4]);
+                }
+                if (columns == 5)
+                {
+                    matrix11.Text = Convert.ToString(matrix[row, 0]);
+                    matrix12.Text = Convert.ToString(matrix[row, 1]);
+                    matrix13.Text = Convert.ToString(matrix[row, 2]);
+                    matrix14.Text = Convert.ToString(matrix[row, 3]);
+                    matrix15.Text = Convert.ToString(matrix[row, 4]);
+                    result1.Text = Convert.ToString(matrix[row, 5]);
+                }
+                
             }
             if (row == 1)
             {
-                matrix21.Text = Convert.ToString(matrix[row, 0]);
-                matrix22.Text = Convert.ToString(matrix[row, 1]);
-                matrix23.Text = Convert.ToString(matrix[row, 2]);
-                matrix24.Text = Convert.ToString(matrix[row, 3]);
-                matrix25.Text = Convert.ToString(matrix[row, 4]);
+                if (columns == 1)
+                {
+                    matrix21.Text = Convert.ToString(matrix[row, 0]);
+
+                    result2.Text = Convert.ToString(matrix[row, 1]);
+                }
+                if (columns == 2)
+                {
+                    matrix21.Text = Convert.ToString(matrix[row, 0]);
+                    matrix22.Text = Convert.ToString(matrix[row, 1]);
+
+                    result2.Text = Convert.ToString(matrix[row, 2]);
+                }
+                if (columns == 3)
+                {
+                    matrix21.Text = Convert.ToString(matrix[row, 0]);
+                    matrix22.Text = Convert.ToString(matrix[row, 1]);
+                    matrix23.Text = Convert.ToString(matrix[row, 2]);
+
+                    result2.Text = Convert.ToString(matrix[row, 3]);
+                }
+                if (columns == 4)
+                {
+                    matrix21.Text = Convert.ToString(matrix[row, 0]);
+                    matrix22.Text = Convert.ToString(matrix[row, 1]);
+                    matrix23.Text = Convert.ToString(matrix[row, 2]);
+                    matrix24.Text = Convert.ToString(matrix[row, 3]);
+
+                    result2.Text = Convert.ToString(matrix[row, 4]);
+                }
+                if (columns == 5)
+                {
+                    matrix21.Text = Convert.ToString(matrix[row, 0]);
+                    matrix22.Text = Convert.ToString(matrix[row, 1]);
+                    matrix23.Text = Convert.ToString(matrix[row, 2]);
+                    matrix24.Text = Convert.ToString(matrix[row, 3]);
+                    matrix25.Text = Convert.ToString(matrix[row, 4]);
+                    result2.Text = Convert.ToString(matrix[row, 5]);
+                }
+                
             }
             if (row == 2)
             {
-                matrix31.Text = Convert.ToString(matrix[row, 0]);
-                matrix32.Text = Convert.ToString(matrix[row, 1]);
-                matrix33.Text = Convert.ToString(matrix[row, 2]);
-                matrix34.Text = Convert.ToString(matrix[row, 3]);
-                matrix35.Text = Convert.ToString(matrix[row, 4]);
+                if (columns == 1)
+                {
+                    matrix31.Text = Convert.ToString(matrix[row, 0]);
+
+                    result3.Text = Convert.ToString(matrix[row, 1]);
+                }
+                if (columns == 2)
+                {
+                    matrix31.Text = Convert.ToString(matrix[row, 0]);
+                    matrix32.Text = Convert.ToString(matrix[row, 1]);
+
+                    result3.Text = Convert.ToString(matrix[row, 2]);
+                }
+                if (columns == 3)
+                {
+                    matrix31.Text = Convert.ToString(matrix[row, 0]);
+                    matrix32.Text = Convert.ToString(matrix[row, 1]);
+                    matrix33.Text = Convert.ToString(matrix[row, 2]);
+
+                    result3.Text = Convert.ToString(matrix[row, 3]);
+                }
+                if (columns == 4)
+                {
+                    matrix31.Text = Convert.ToString(matrix[row, 0]);
+                    matrix32.Text = Convert.ToString(matrix[row, 1]);
+                    matrix33.Text = Convert.ToString(matrix[row, 2]);
+                    matrix34.Text = Convert.ToString(matrix[row, 3]);
+
+                    result3.Text = Convert.ToString(matrix[row, 4]);
+                }
+                if (columns == 5)
+                {
+                    matrix31.Text = Convert.ToString(matrix[row, 0]);
+                    matrix32.Text = Convert.ToString(matrix[row, 1]);
+                    matrix33.Text = Convert.ToString(matrix[row, 2]);
+                    matrix34.Text = Convert.ToString(matrix[row, 3]);
+                    matrix35.Text = Convert.ToString(matrix[row, 4]);
+                    result3.Text = Convert.ToString(matrix[row, 5]);
+                }
+                
             }
-            if (row == 3)
+            if (row == 3 && columns == 5)
             {
-                matrix41.Text = Convert.ToString(matrix[row, 0]);
-                matrix42.Text = Convert.ToString(matrix[row, 1]);
-                matrix43.Text = Convert.ToString(matrix[row, 2]);
-                matrix44.Text = Convert.ToString(matrix[row, 3]);
-                matrix45.Text = Convert.ToString(matrix[row, 4]);
+                if (columns == 1)
+                {
+                    matrix41.Text = Convert.ToString(matrix[row, 0]);
+
+                    result4.Text = Convert.ToString(matrix[row, 1]);
+                }
+                if (columns == 2)
+                {
+                    matrix41.Text = Convert.ToString(matrix[row, 0]);
+                    matrix42.Text = Convert.ToString(matrix[row, 1]);
+
+                    result4.Text = Convert.ToString(matrix[row, 2]);
+                }
+                if (columns == 3)
+                {
+                    matrix41.Text = Convert.ToString(matrix[row, 0]);
+                    matrix42.Text = Convert.ToString(matrix[row, 1]);
+                    matrix43.Text = Convert.ToString(matrix[row, 2]);
+
+                    result4.Text = Convert.ToString(matrix[row, 3]);
+                }
+                if (columns == 4)
+                {
+                    matrix41.Text = Convert.ToString(matrix[row, 0]);
+                    matrix42.Text = Convert.ToString(matrix[row, 1]);
+                    matrix43.Text = Convert.ToString(matrix[row, 2]);
+                    matrix44.Text = Convert.ToString(matrix[row, 3]);
+
+                    result4.Text = Convert.ToString(matrix[row, 4]);
+                }
+                if (columns == 5)
+                {
+                    matrix41.Text = Convert.ToString(matrix[row, 0]);
+                    matrix42.Text = Convert.ToString(matrix[row, 1]);
+                    matrix43.Text = Convert.ToString(matrix[row, 2]);
+                    matrix44.Text = Convert.ToString(matrix[row, 3]);
+                    matrix45.Text = Convert.ToString(matrix[row, 4]);
+                    result4.Text = Convert.ToString(matrix[row, 5]);
+                }
+
             }
             if (row == 4)
             {
-                matrix51.Text = Convert.ToString(matrix[row, 0]);
-                matrix52.Text = Convert.ToString(matrix[row, 1]);
-                matrix53.Text = Convert.ToString(matrix[row, 2]);
-                matrix54.Text = Convert.ToString(matrix[row, 3]);
-                matrix55.Text = Convert.ToString(matrix[row, 4]);
+                if (columns == 1)
+                {
+                    matrix51.Text = Convert.ToString(matrix[row, 0]);
+
+                    result5.Text = Convert.ToString(matrix[row, 1]);
+                }
+                if (columns == 2)
+                {
+                    matrix51.Text = Convert.ToString(matrix[row, 0]);
+                    matrix52.Text = Convert.ToString(matrix[row, 1]);
+
+                    result5.Text = Convert.ToString(matrix[row, 2]);
+                }
+                if (columns == 3)
+                {
+                    matrix51.Text = Convert.ToString(matrix[row, 0]);
+                    matrix52.Text = Convert.ToString(matrix[row, 1]);
+                    matrix53.Text = Convert.ToString(matrix[row, 2]);
+
+                    result5.Text = Convert.ToString(matrix[row, 3]);
+                }
+                if (columns == 4)
+                {
+                    matrix51.Text = Convert.ToString(matrix[row, 0]);
+                    matrix52.Text = Convert.ToString(matrix[row, 1]);
+                    matrix53.Text = Convert.ToString(matrix[row, 2]);
+                    matrix54.Text = Convert.ToString(matrix[row, 3]);
+                    
+                    result5.Text = Convert.ToString(matrix[row, 4]);
+                }
+                if (columns == 5)
+                {
+                    matrix51.Text = Convert.ToString(matrix[row, 0]);
+                    matrix52.Text = Convert.ToString(matrix[row, 1]);
+                    matrix53.Text = Convert.ToString(matrix[row, 2]);
+                    matrix54.Text = Convert.ToString(matrix[row, 3]);
+                    matrix55.Text = Convert.ToString(matrix[row, 4]);
+                    result5.Text = Convert.ToString(matrix[row, 5]);
+                }
+                
             }
         }
 
