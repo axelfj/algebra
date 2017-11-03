@@ -15,17 +15,17 @@ namespace InterfazGrafica
 
         public static Double CofactorAlpha(Point3D a, Point3D b)
         {
-            return (a.Y * b.Z - a.Z * b.Y);
+            return ((a.Y * b.Z) - (a.Z * b.Y));
         }
 
         public static Double CofactorBeta(Point3D a, Point3D b)
         {
-            return (a.X * b.Z - a.Z * b.X);
+            return ((a.X * b.Z) - (a.Z * b.X));
         }
 
         public static Double CofactorDelta(Point3D a, Point3D b)
         {
-            return (a.X * b.Y - a.Y * b.X);
+            return ((a.X * b.Y) - (a.Y * b.X));
         }
 
         public Base3D(Point3D u, Point3D v, Point3D w)

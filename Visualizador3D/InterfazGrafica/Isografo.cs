@@ -13,8 +13,8 @@ namespace InterfazGrafica
         {
             Point punto = new Point
             {
-                X = Convert.ToInt32(p.X - p.Y),
-                Y = Convert.ToInt32(((p.X + p.Y - 2 * p.Z) / 2))
+                X = Convert.ToInt32(p.Y - p.X),
+                Y = Convert.ToInt32(((p.X + p.Y - 2 * p.Z) * 0.5))
             };
 
             return punto;
@@ -22,7 +22,7 @@ namespace InterfazGrafica
 
         public Point Transformar3Da2D(Point3D p, double angulo)
         {
-            Point3D pAngulado = new Point3D((Math.Cos(angulo) * p.X - Math.Sin(angulo) * p.Y), (Math.Sin(angulo) * p.X + Math.Cos(angulo) * p.Y), p.Z);
+            Point3D pAngulado = new Point3D(((Math.Cos(angulo) * p.X) - (Math.Sin(angulo) * p.Y)), ((Math.Sin(angulo) * p.X) + (Math.Cos(angulo) * p.Y)), p.Z);
 
             return Transformar3Da2D(pAngulado);
         }

@@ -33,8 +33,8 @@ namespace InterfazGrafica
             CentroCanvas.Y = canvas.Height / 2;
             Dibujando = false;
             radioCirculo = 5;
-            factorZoom = 30;
-            distanciaXYZ = 100;
+            factorZoom = 50;
+            distanciaXYZ = 5;
         }
 
         private void Canvas_Paint(object sender, PaintEventArgs e)
@@ -47,11 +47,9 @@ namespace InterfazGrafica
 
             string CoordenadasPB = String.Format(TituloCoordenadasPB, pEnBNoZoom.X, pEnBNoZoom.Y, pEnBNoZoom.Z);
 
-            Point puntosP2D = isografo.Transformar3Da2D(PuntosP, Angulo);
-
-            Point ejeX = isografo.Transformar3Da2D(new Point3D(distanciaXYZ, 0, 0), Angulo);
-            Point ejeY = isografo.Transformar3Da2D(new Point3D(0, distanciaXYZ, 0), Angulo);
-            Point ejeZ = isografo.Transformar3Da2D(new Point3D(0, 0, distanciaXYZ), Angulo);
+            Point ejeX = isografo.Transformar3Da2D(new Point3D(distanciaXYZ * factorZoom, 0, 0), Angulo);
+            Point ejeY = isografo.Transformar3Da2D(new Point3D(0, distanciaXYZ * factorZoom, 0), Angulo);
+            Point ejeZ = isografo.Transformar3Da2D(new Point3D(0, 0, distanciaXYZ * factorZoom), Angulo);
 
             graphics.DrawString(CoordenadasPB, lblBaseB.Font, Brushes.Black, 10, 10);
 
@@ -71,13 +69,9 @@ namespace InterfazGrafica
             graphics.DrawLine(Pens.Blue, CentroCanvas, baseY);
             graphics.DrawLine(Pens.Blue, CentroCanvas, baseZ);
 
-            Point puntoX;
-            Point puntoY;
-            Point puntoZ;
-
-            puntoX = baseX;
-            puntoY = baseY;
-            puntoZ = baseZ;
+            Point puntoX = Centralizar(isografo.Transformar3Da2D(isografo.PuntosPEnBaseB(new Point3D((BaseB.U.X != 0) ? PuntosP.X * factorZoom : 1, (BaseB.U.Y != 0) ? PuntosP.Y * factorZoom : 1, (BaseB.U.Z != 0) ? PuntosP.Z * factorZoom : 1), BaseB), Angulo));
+            Point puntoY = Centralizar(isografo.Transformar3Da2D(isografo.PuntosPEnBaseB(new Point3D((BaseB.V.X != 0) ? PuntosP.X * factorZoom : 1, (BaseB.V.Y != 0) ? PuntosP.Y * factorZoom : 1, (BaseB.V.Z != 0) ? PuntosP.Z * factorZoom : 1), BaseB), Angulo));
+            Point puntoZ = Centralizar(isografo.Transformar3Da2D(isografo.PuntosPEnBaseB(new Point3D((BaseB.W.X != 0) ? PuntosP.X * factorZoom : 1, (BaseB.W.Y != 0) ? PuntosP.Y * factorZoom : 1, (BaseB.W.Z != 0) ? PuntosP.Z * factorZoom : 1), BaseB), Angulo));
 
             graphics.DrawLine(Pens.Cyan, CentroCanvas, puntoX);
             graphics.DrawLine(Pens.Cyan, CentroCanvas, puntoY);
@@ -93,14 +87,13 @@ namespace InterfazGrafica
             Point puntoPEnB = Centralizar(isografo.Transformar3Da2D(PuntosP, Angulo));
 
             Point interseccionXY = new Point((puntoX.X + puntoY.X) - CentroCanvas.X, (puntoY.Y + puntoX.Y) - CentroCanvas.Y);
-            Point interseccionXYZ = new Point((interseccionXY.X + puntoZ.X) - CentroCanvas.X, (interseccionXY.Y + puntoZ.Y) - CentroCanvas.Y);
 
             if (Dibujando)
             {
                 graphics.FillEllipse(Brushes.Red, new Rectangle(puntoPEnB.X - radioCirculo, puntoPEnB.Y - radioCirculo, radioCirculo * 2, radioCirculo * 2));
                 graphics.DrawLine(lineaPunteada, puntoX, interseccionXY);
                 graphics.DrawLine(lineaPunteada, puntoY, interseccionXY);
-                graphics.DrawLine(lineaPunteada, interseccionXY, interseccionXYZ);
+                graphics.DrawLine(lineaPunteada, interseccionXY, puntoPEnB);
             }
 
             lineaPunteada.Dispose();
@@ -182,6 +175,106 @@ namespace InterfazGrafica
             Angulo = ((TrackBar)sender).Value * 0.01;
 
             canvas.Invalidate();
+        }
+
+        private void lblW3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblW2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblW1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblV3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblV2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblV1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblU3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblU2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblU1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblW_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblU_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblVisualizador_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBaseB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblP3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblP2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblP1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBaseBAbre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBCierra_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
