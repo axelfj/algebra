@@ -13,8 +13,6 @@ namespace UI
 {
     public partial class Main : Form
     {
-
-
         private string mensajeDeterminante = "El determinante es: ";
         private string mensajeSistema = "El conjunto de solución es: ";
 
@@ -367,8 +365,6 @@ namespace UI
                     break;
             }
         }
-
-        
 
         private void imprimirSolucion(List<double[,]> nMatrices, int n)
         {
