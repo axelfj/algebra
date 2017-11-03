@@ -129,7 +129,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.Teal;
-            this.lblTitulo.Location = new System.Drawing.Point(305, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(297, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(330, 19);
             this.lblTitulo.TabIndex = 45;
@@ -345,7 +345,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(376, 170);
+            this.label1.Location = new System.Drawing.Point(368, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 19);
             this.label1.TabIndex = 75;
@@ -357,7 +357,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(675, 88);
+            this.label2.Location = new System.Drawing.Point(667, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(174, 19);
             this.label2.TabIndex = 76;
@@ -369,7 +369,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(52, 88);
+            this.label3.Location = new System.Drawing.Point(44, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(231, 19);
             this.label3.TabIndex = 77;
@@ -437,7 +437,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(980, 457);
+            this.ClientSize = new System.Drawing.Size(965, 386);
             this.Controls.Add(this.dimensions);
             this.Controls.Add(this.cleanMatrix);
             this.Controls.Add(this.newMatrix);
