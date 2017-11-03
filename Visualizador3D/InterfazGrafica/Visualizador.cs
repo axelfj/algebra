@@ -33,7 +33,7 @@ namespace InterfazGrafica
             CentroCanvas.Y = canvas.Height / 2;
             Dibujando = false;
             radioCirculo = 5;
-            factorZoom = 50;
+            factorZoom = 30;
             distanciaXYZ = 100;
         }
 
@@ -45,9 +45,9 @@ namespace InterfazGrafica
 
             Point3D pEnBNoZoom = isografo.PuntosPEnBaseB(PuntosP, BaseB);
 
-            Point3D pEnB = new Point3D(pEnBNoZoom.X * factorZoom, pEnBNoZoom.Y * factorZoom, pEnBNoZoom.Z * factorZoom);
-
             string CoordenadasPB = String.Format(TituloCoordenadasPB, pEnBNoZoom.X, pEnBNoZoom.Y, pEnBNoZoom.Z);
+
+            Point puntosP2D = isografo.Transformar3Da2D(PuntosP, Angulo);
 
             Point ejeX = isografo.Transformar3Da2D(new Point3D(distanciaXYZ, 0, 0), Angulo);
             Point ejeY = isografo.Transformar3Da2D(new Point3D(0, distanciaXYZ, 0), Angulo);
@@ -71,13 +71,17 @@ namespace InterfazGrafica
             graphics.DrawLine(Pens.Blue, CentroCanvas, baseY);
             graphics.DrawLine(Pens.Blue, CentroCanvas, baseZ);
 
-            Point puntoX = Centralizar(isografo.Transformar3Da2D(isografo.PuntosPEnBaseB(new Point3D(PuntosP.X * factorZoom, 0, 0), BaseB), Angulo));
-            Point puntoY = Centralizar(isografo.Transformar3Da2D(isografo.PuntosPEnBaseB(new Point3D(0, PuntosP.Y * factorZoom, 0), BaseB), Angulo));
-            Point puntoZ = Centralizar(isografo.Transformar3Da2D(isografo.PuntosPEnBaseB(new Point3D(0, 0, PuntosP.Z * factorZoom), BaseB), Angulo));
+            Point puntoX;
+            Point puntoY;
+            Point puntoZ;
 
-            graphics.DrawLine(Pens.Green, CentroCanvas, puntoX);
-            graphics.DrawLine(Pens.Green, CentroCanvas, puntoY);
-            graphics.DrawLine(Pens.Green, CentroCanvas, puntoZ);
+            puntoX = baseX;
+            puntoY = baseY;
+            puntoZ = baseZ;
+
+            graphics.DrawLine(Pens.Cyan, CentroCanvas, puntoX);
+            graphics.DrawLine(Pens.Cyan, CentroCanvas, puntoY);
+            graphics.DrawLine(Pens.Cyan, CentroCanvas, puntoZ);
 
             Pen lineaPunteada = new Pen(Brushes.Green)
             {
@@ -86,7 +90,7 @@ namespace InterfazGrafica
                 DashPattern = new float[] { 4.0F, 2.0F }
             };
 
-            Point puntoPEnB = Centralizar(isografo.Transformar3Da2D(pEnB, Angulo));
+            Point puntoPEnB = Centralizar(isografo.Transformar3Da2D(PuntosP, Angulo));
 
             Point interseccionXY = new Point((puntoX.X + puntoY.X) - CentroCanvas.X, (puntoY.Y + puntoX.Y) - CentroCanvas.Y);
             Point interseccionXYZ = new Point((interseccionXY.X + puntoZ.X) - CentroCanvas.X, (interseccionXY.Y + puntoZ.Y) - CentroCanvas.Y);

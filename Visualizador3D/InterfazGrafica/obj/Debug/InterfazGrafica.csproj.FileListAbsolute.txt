@@ -11,10 +11,10 @@ C:\Users\diego\source\repos\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGra
 D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\bin\Debug\InterfazGrafica.exe.config
 D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\bin\Debug\InterfazGrafica.exe
 D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\bin\Debug\InterfazGrafica.pdb
-D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.csprojResolveAssemblyReference.cache
 D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.Properties.Resources.resources
 D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.Visualizador.resources
 D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.csproj.GenerateResource.Cache
 D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.csproj.CoreCompileInputs.cache
 D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.exe
 D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.pdb
+D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Debug\InterfazGrafica.csprojResolveAssemblyReference.cache
