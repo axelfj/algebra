@@ -18,3 +18,13 @@ D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.c
 D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.csproj.CoreCompileInputs.cache
 D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.exe
 D:\TEC\2017 II Sem\Álgebra Lineal\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.pdb
+D:\Datos\Documents\GitHub\Project-Algebra\Gauss\Gauss\bin\Debug\Gauss.exe.config
+D:\Datos\Documents\GitHub\Project-Algebra\Gauss\Gauss\bin\Debug\Gauss.exe
+D:\Datos\Documents\GitHub\Project-Algebra\Gauss\Gauss\bin\Debug\Gauss.pdb
+D:\Datos\Documents\GitHub\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.csprojResolveAssemblyReference.cache
+D:\Datos\Documents\GitHub\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.mainWindow.resources
+D:\Datos\Documents\GitHub\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.Properties.Resources.resources
+D:\Datos\Documents\GitHub\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.csproj.GenerateResource.Cache
+D:\Datos\Documents\GitHub\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.csproj.CoreCompileInputs.cache
+D:\Datos\Documents\GitHub\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.exe
+D:\Datos\Documents\GitHub\Project-Algebra\Gauss\Gauss\obj\Debug\Gauss.pdb
