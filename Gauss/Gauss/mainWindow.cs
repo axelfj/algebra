@@ -14,6 +14,7 @@ namespace Gauss
     {
         public int iterator = 1;
         public string toHistory = "";
+        public Stack<int[,]> undo = new Stack<int[,]>();
 
         public mainWindow()
         {
@@ -29,11 +30,18 @@ namespace Gauss
 
         private void label3_Click_1(object sender, EventArgs e){}
 
-        private void button1_Click_1(object sender, EventArgs e){}
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            toHistory = toHistory + toString(toMatrix());
+            historyMatrix.Text = toHistory;
+        }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
             clean();
+            toHistory = "";
+            historyMatrix.Text = "";
         }
 
         private void clean()
@@ -1171,32 +1179,142 @@ namespace Gauss
             int m = dimensionsParser[0] - 48;
             int n = dimensionsParser[2] - 47;
             int[,] matrix = toMatrix();
-            
-            string operationParser = operationBox.Text;
-            int number = 0;
+
+
             // Hacemos un array de char, para almacenar la operación que se desea efectuar //
+            //int number = 0;
+            string operationParser = operationBox.Text;
             char[] opParse = operationParser.ToArray();
-            for (int i = 0; i < opParse.Length; i++)
+
+            int number = new int();
+            int firstRow = new int();
+            int secondRow = new int();
+
+            if (opParse.Length == 3)
             {
-                    
+                number = Convert.ToInt32(opParse[0]) - 48;
+                firstRow = Convert.ToInt32(opParse[2]) - 49;
+                matrix = productRow(matrix, number, firstRow);
+                toGui(matrix,firstRow);
             }
-            toHistory += number + Environment.NewLine;
 
+            if (opParse.Length == 6)
+            {
+                number = Convert.ToInt32(opParse[0]) - 48;
+                firstRow = Convert.ToInt32(opParse[2]) - 49;
+                secondRow = Convert.ToInt32(opParse[5]) - 49;
+                matrix = rowXrow(matrix, number, firstRow, secondRow);
+                toGui(matrix, secondRow);
+            }
 
-            toHistory = toHistory + Environment.NewLine;
+            if (opParse.Length == 5)
+            {
+                if (opParse[2] == ',')
+                {
+                    firstRow = Convert.ToInt32(opParse[1]) - 49;
+                    secondRow = Convert.ToInt32(opParse[4]) - 49;
+                    matrix = changeRows(matrix, firstRow, secondRow);
+                    toGui(matrix, firstRow);
+                    toGui(matrix, secondRow);
+                }
+            }
+
+            undo.Push(matrix);
+            toHistory = toString(matrix);
+            historyMatrix.Text = toHistory;
+            operationBox.Text = "";
+        }
+
+        private String toString(int[,] matrix)
+        {
+            string operationParser = operationBox.Text;
             toHistory += "Op #" + Convert.ToString(iterator) + "\t" + operationParser + Environment.NewLine;
-            iterator++;
-            for (int i = 0; i < m; i++)
+            toHistory = toHistory + Environment.NewLine;
+            for (int i = 0; i < matrix.GetLength(0)-1; i++)
             {
                 string matrixRow = "";
-                for (int j = 0; j < n; j++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
                 {
                     matrixRow += Convert.ToString(matrix[i, j]) + ",";
                 }
                 toHistory += matrixRow + Environment.NewLine;
             }
-            historyMatrix.Text = toHistory;
-            operationBox.Text = "";
+            iterator++;
+            return toHistory;
+        }
+
+        private int[,] productRow(int[,] matrix, int number, int row)
+        {
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                matrix[row, i] *= number; 
+            }
+            return matrix;
+        }
+
+        private int[,] rowXrow(int[,] matrix, int number, int firstRow, int secondRow)
+        {
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                matrix[secondRow, i] += (matrix[firstRow,i]*number);
+            }
+            return matrix;
+        }
+
+        private void toGui(int[,] matrix, int row)
+        {
+            if (row == 0)
+            {
+                matrix11.Text = Convert.ToString(matrix[row, 0]);
+                matrix12.Text = Convert.ToString(matrix[row, 1]);
+                matrix13.Text = Convert.ToString(matrix[row, 2]);
+                matrix14.Text = Convert.ToString(matrix[row, 3]);
+                matrix15.Text = Convert.ToString(matrix[row, 4]);
+            }
+            if (row == 1)
+            {
+                matrix21.Text = Convert.ToString(matrix[row, 0]);
+                matrix22.Text = Convert.ToString(matrix[row, 1]);
+                matrix23.Text = Convert.ToString(matrix[row, 2]);
+                matrix24.Text = Convert.ToString(matrix[row, 3]);
+                matrix25.Text = Convert.ToString(matrix[row, 4]);
+            }
+            if (row == 2)
+            {
+                matrix31.Text = Convert.ToString(matrix[row, 0]);
+                matrix32.Text = Convert.ToString(matrix[row, 1]);
+                matrix33.Text = Convert.ToString(matrix[row, 2]);
+                matrix34.Text = Convert.ToString(matrix[row, 3]);
+                matrix35.Text = Convert.ToString(matrix[row, 4]);
+            }
+            if (row == 3)
+            {
+                matrix41.Text = Convert.ToString(matrix[row, 0]);
+                matrix42.Text = Convert.ToString(matrix[row, 1]);
+                matrix43.Text = Convert.ToString(matrix[row, 2]);
+                matrix44.Text = Convert.ToString(matrix[row, 3]);
+                matrix45.Text = Convert.ToString(matrix[row, 4]);
+            }
+            if (row == 4)
+            {
+                matrix51.Text = Convert.ToString(matrix[row, 0]);
+                matrix52.Text = Convert.ToString(matrix[row, 1]);
+                matrix53.Text = Convert.ToString(matrix[row, 2]);
+                matrix54.Text = Convert.ToString(matrix[row, 3]);
+                matrix55.Text = Convert.ToString(matrix[row, 4]);
+            }
+        }
+
+        private int[,] changeRows(int[,] matrix, int firstRow, int secondRow)
+        {
+            int[,] copy = matrix;
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                matrix[firstRow, i] = copy[secondRow, i];
+                matrix[secondRow, i] = copy[firstRow, i];
+            }
+            return matrix;
         }
     }
 }

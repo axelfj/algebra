@@ -12,7 +12,6 @@
         int g = gcd(numerator, denominator);
         num = numerator / g;
         den = denominator / g;
-
     }
 
     public String toString()
@@ -21,10 +20,7 @@
         else return num + "/" + den;
     }
 
-    public Rational times(Rational b)
-    {
-        return new Rational(this.num * b.num, this.den * b.den);
-    }
+    public Rational times(Rational b){return new Rational(this.num * b.num, this.den * b.den);}
 
 
     public Rational plus(Rational b)
@@ -36,11 +32,7 @@
 
     public Rational reciprocal() { return new Rational(den, num); }
 
-
-    public Rational divides(Rational b)
-    {
-        return this.times(b.reciprocal());
-    }
+    public Rational divides(Rational b){return this.times(b.reciprocal());}
 
     private static int gcd(int m, int n)
     {
