@@ -1204,7 +1204,7 @@ namespace Gauss
                 firstRow = Convert.ToInt32(opParse[2]) - 49;
                 secondRow = Convert.ToInt32(opParse[5]) - 49;
                 matrix = rowXrow(matrix, number, firstRow, secondRow);
-                toGui(matrix, secondRow, n);
+                toGui(matrix, secondRow, n-1);
             }
 
             if (opParse.Length == 5)
