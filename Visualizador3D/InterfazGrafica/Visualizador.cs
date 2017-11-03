@@ -33,7 +33,7 @@ namespace InterfazGrafica
             CentroCanvas.Y = canvas.Height / 2;
             Dibujando = false;
             radioCirculo = 5;
-            factorZoom = 50;
+            factorZoom = 30;
             distanciaXYZ = 5;
         }
 
@@ -65,13 +65,28 @@ namespace InterfazGrafica
             Point baseY = Centralizar(isografo.Transformar3Da2D(BaseB.V, Angulo));
             Point baseZ = Centralizar(isografo.Transformar3Da2D(BaseB.W, Angulo));
 
-            graphics.DrawLine(Pens.Blue, CentroCanvas, baseX);
-            graphics.DrawLine(Pens.Blue, CentroCanvas, baseY);
-            graphics.DrawLine(Pens.Blue, CentroCanvas, baseZ);
+            Pen lapizBase = new Pen(Brushes.Blue, 2);
 
-            Point puntoX = Centralizar(isografo.Transformar3Da2D(isografo.PuntosPEnBaseB(new Point3D((BaseB.U.X != 0) ? PuntosP.X * factorZoom : 1, (BaseB.U.Y != 0) ? PuntosP.Y * factorZoom : 1, (BaseB.U.Z != 0) ? PuntosP.Z * factorZoom : 1), BaseB), Angulo));
-            Point puntoY = Centralizar(isografo.Transformar3Da2D(isografo.PuntosPEnBaseB(new Point3D((BaseB.V.X != 0) ? PuntosP.X * factorZoom : 1, (BaseB.V.Y != 0) ? PuntosP.Y * factorZoom : 1, (BaseB.V.Z != 0) ? PuntosP.Z * factorZoom : 1), BaseB), Angulo));
-            Point puntoZ = Centralizar(isografo.Transformar3Da2D(isografo.PuntosPEnBaseB(new Point3D((BaseB.W.X != 0) ? PuntosP.X * factorZoom : 1, (BaseB.W.Y != 0) ? PuntosP.Y * factorZoom : 1, (BaseB.W.Z != 0) ? PuntosP.Z * factorZoom : 1), BaseB), Angulo));
+            graphics.DrawLine(lapizBase, CentroCanvas, baseX);
+            graphics.DrawLine(lapizBase, CentroCanvas, baseY);
+            graphics.DrawLine(lapizBase, CentroCanvas, baseZ);
+
+            lapizBase.Dispose();
+
+            Point3D puntoX3D = isografo.PuntosPEnBaseB(new Point3D((BaseB.U.X != 0) ? PuntosP.X : 1, (BaseB.U.Y != 0) ? PuntosP.Y : 1, (BaseB.U.Z != 0) ? PuntosP.Z : 1), BaseB);
+            Point3D puntoY3D = isografo.PuntosPEnBaseB(new Point3D((BaseB.V.X != 0) ? PuntosP.X : 1, (BaseB.V.Y != 0) ? PuntosP.Y : 1, (BaseB.V.Z != 0) ? PuntosP.Z : 1), BaseB);
+            Point3D puntoZ3D = isografo.PuntosPEnBaseB(new Point3D((BaseB.W.X != 0) ? PuntosP.X : 1, (BaseB.W.Y != 0) ? PuntosP.Y : 1, (BaseB.W.Z != 0) ? PuntosP.Z : 1), BaseB);
+
+            Point puntoX = isografo.Transformar3Da2D(puntoX3D, Angulo);
+            Point puntoY = isografo.Transformar3Da2D(puntoY3D, Angulo);
+            Point puntoZ = isografo.Transformar3Da2D(puntoZ3D, Angulo);
+
+            puntoX.X = (puntoX.X + baseX.X);
+            puntoX.Y = (puntoX.Y + baseX.Y);
+            puntoY.X = (puntoY.X + baseY.X);
+            puntoY.Y = (puntoY.Y + baseY.Y);
+            puntoZ.X = (puntoZ.X + baseZ.X);
+            puntoZ.Y = (puntoZ.Y + baseZ.Y);
 
             graphics.DrawLine(Pens.Cyan, CentroCanvas, puntoX);
             graphics.DrawLine(Pens.Cyan, CentroCanvas, puntoY);
@@ -91,8 +106,8 @@ namespace InterfazGrafica
             if (Dibujando)
             {
                 graphics.FillEllipse(Brushes.Red, new Rectangle(puntoPEnB.X - radioCirculo, puntoPEnB.Y - radioCirculo, radioCirculo * 2, radioCirculo * 2));
-                graphics.DrawLine(lineaPunteada, puntoX, interseccionXY);
                 graphics.DrawLine(lineaPunteada, puntoY, interseccionXY);
+                graphics.DrawLine(lineaPunteada, puntoX, interseccionXY);
                 graphics.DrawLine(lineaPunteada, interseccionXY, puntoPEnB);
             }
 

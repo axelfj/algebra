@@ -1,0 +1,9 @@
+D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\bin\Release\InterfazGrafica.exe.config
+D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\bin\Release\InterfazGrafica.exe
+D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\bin\Release\InterfazGrafica.pdb
+D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Release\InterfazGrafica.Properties.Resources.resources
+D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Release\InterfazGrafica.Visualizador.resources
+D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Release\InterfazGrafica.csproj.GenerateResource.Cache
+D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Release\InterfazGrafica.csproj.CoreCompileInputs.cache
+D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Release\InterfazGrafica.exe
+D:\Datos\Documents\GitHub\Project-Algebra\Visualizador3D\InterfazGrafica\obj\Release\InterfazGrafica.pdb
